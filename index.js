@@ -4,6 +4,7 @@ const cors = require('cors');
 require('./src/utils/config');
 
 const mailRoute = require('./src/routes/mail.routes');
+const { defaultRoute } = require('./src/routes/default.routes');
 
 
 const app = express();
@@ -28,6 +29,13 @@ app.get("/", (req, res) => {
 });
 
 app.use('/mail', mailRoute);
+
+app.get("*", defaultRoute);
+app.post("*", defaultRoute);
+app.put("*", defaultRoute);
+app.delete("*", defaultRoute);
+app.patch("*", defaultRoute);
+app.options("*", defaultRoute);
 
 app.listen(config.api.port, () => {
     console.log('Server is running on port 1242');
