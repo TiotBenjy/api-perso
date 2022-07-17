@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            min-height: 80vh;
+            background-color: rgb(56, 140, 209);
+            white-space: pre-wrap;
+        }
+
+        .container{
+            margin-top: 2rem;
+        }
+
+        .data__container {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .data__container h1{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .letter__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .letter__icon img {
+            padding: 0.5rem;
+            width: 75px;
+            height: auto;
+            border: 2px black solid;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Template for recieving form data-->
+    <div class="container">
+        <div class="data__container">
+            <div class="letter__icon">
+                <img src="https://icons.iconarchive.com/icons/paomedia/small-n-flat/64/envelope-letter-icon.png" alt="">
+            </div>
+
+            <h1>Nouvelle demande depuis le site.</h1>
+            <p>
+                <strong>Nom:</strong> {{ firstname }}<br>
+                <strong>Prénom:</strong> {{ lastname }}<br>
+                <strong>Email:</strong> {{ email }}<br>
+                <strong>Téléphone:</strong> {{ phone }}
+                <br>
+                <strong>Objet :</strong> {{ object }}
+                <strong>Message:</strong> {{ message }}
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
